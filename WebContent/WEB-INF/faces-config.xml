@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ <navigation-rule>
+  <from-view-id>/login.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>success</from-outcome>
+   <to-view-id>/WEB-INF/facelet/menu.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>/WEB-INF/facelet/menu.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>produit</from-outcome>
+   <to-view-id>/pages/Produit.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>fournisseur</from-outcome>
+   <to-view-id>/pages/Fournisseur.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>util</from-outcome>
+   <to-view-id>/pages/utilisateur.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>/pages/utilisateur.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>ajout</from-outcome>
+   <to-view-id>/pages/addUser.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>suppression</from-outcome>
+   <to-view-id>/pages/deleteUser.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>/pages/addUser.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>back</from-outcome>
+   <to-view-id>/pages/utilisateur.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application/>
+</faces-config>

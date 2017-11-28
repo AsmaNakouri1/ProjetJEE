@@ -1,0 +1,29 @@
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui" 
+	template="/WEB-INF/facelet/layout.xhtml">
+	<ui:define name="title">Ajout Utilisteur</ui:define>
+	<ui:define name="contentLeft">
+	</ui:define>
+	<ui:define name="contentCenter">
+		<h:form id="mainForm">
+			<h:panelGrid columns="3">
+			<h:outputText style="width:100px" value="donner les coordonnées du nouveau utilisateur :"/>
+				<h:outputText style="width:100px" value="login :"/>
+				<p:inputText id="a_username" style="width:200px" value="#{loginCtr.userName}"/>
+				<p:message for="a_username" style="color:red;" />
+				<h:outputText style="width:100px" value="mot de passe :"/>
+				<p:inputText id="a_password" style="width:200px" value="#{loginCtr.userPassWord}"/>
+				<p:message for="a_password" style="color:red;" />
+				<h:column/>
+				 <p:commandButton value="ajouter" action="#{loginCtr.ajouterUtilisateur}" />
+			<p:commandButton value="precedent" action="#{loginCtr.back}" />		
+			</h:panelGrid>
+		</h:form>
+		<p:messages autoUpdate="true"></p:messages>
+	</ui:define>
+</ui:composition>
